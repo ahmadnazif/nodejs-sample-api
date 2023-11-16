@@ -1,5 +1,5 @@
 const express = require('express');
-const bodyParser = require('body-parser');
+//const bodyParser = require('body-parser');
 const response = require('./models/response');
 const db = require('./services/db');
 const smsbase = require('./models/smsbase');
@@ -7,7 +7,7 @@ const port = 5678;
 
 const app = express();
 app.use(express.json());
-app.use(bodyParser.json());
+//app.use(bodyParser.json());
 
 app.listen(port, () => {
     console.log(`Listened on port ${port}`);
