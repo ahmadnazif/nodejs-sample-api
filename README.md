@@ -5,10 +5,10 @@ This is a simple API server that build using NodeJS and Express. This app is con
 ## Dependency used
 - ExpressJS
 - uuid
-- node-js-db
+- node-json-db
 
 ## Data storage
-- This app use a very simple document base storage called `node-js-db`. Data is persisted there. You may change the document by navigating to `/src/servies/db.js` and change the filename in `Config`.
+- This app use a very simple document base storage called `node-json-db`. Data is persisted there. You may change the document by navigating to `/src/servies/db.js` and change the filename in `Config`.
 
 ## Running sample
 - Clone this repo
