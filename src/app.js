@@ -1,11 +1,12 @@
-const expr = require('express');
+const express = require('express');
 const response = require('./models/response');
+const port = 5678;
 
-const app = expr();
-app.use(expr.json());
+const app = express();
+app.use(express.json());
 
-app.listen(5678, () => {
-    console.log(`Listened on port 5678`);
+app.listen(port, () => {
+    console.log(`Listened on port ${port}`);
 });
 
 app.get("/", (req, res) => {
@@ -13,7 +14,9 @@ app.get("/", (req, res) => {
 });
 
 app.get("/sms/get", (req, res) => {
-    res.send("get");
+
+    let id = req.query.id;
+    res.send("ID: "+id);
 });
 
 app.get("/sms/list-all", (req, res) => {
@@ -29,5 +32,7 @@ app.put("/sms/edit", (req, res) => {
 });
 
 app.delete("/sms/delete", (req, res) => {
+
+    let id = req.query.id;
     res.send("delete");
 });
