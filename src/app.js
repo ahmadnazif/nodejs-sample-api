@@ -1,4 +1,6 @@
 const express = require('express');
+const uuid = require('uuid');
+
 //const bodyParser = require('body-parser');
 const response = require('./models/response');
 const db = require('./services/db');
@@ -32,20 +34,27 @@ app.get("/sms/list-all", async (req, res) => {
 
 app.post("/sms/add", async (req, res) => {
 
-    //let id = req.body.id;
+    let id = uuid.v4();
     let from = req.body.from;
     let to = req.body.to;
     let text = req.body.text;
-    let resp = await db.add(from, to, text);
+    let resp = await db.add(id, from, to, text);
     res.send(resp);
 });
 
-app.put("/sms/edit", (req, res) => {
-    res.send("edit");
+app.put("/sms/edit", async (req, res) => {
+
+    let id = req.body.smsId;
+    let from = req.body.from;
+    let to = req.body.to;
+    let text = req.body.text;
+    let resp = await db.edit(id, from, to, text);
+    res.send(resp);
 });
 
-app.delete("/sms/delete", (req, res) => {
+app.delete("/sms/delete", async (req, res) => {
 
     let id = req.query.id;
-    res.send("delete");
+    let resp = await db.delete(id);
+    res.send(resp);
 });
