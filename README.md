@@ -19,6 +19,7 @@ This is a simple API server that build using NodeJS and Express. This app is con
   - Run: `node app.js`
 
 ## Running & build using Docker
+- Clone this repo
 - Expose the same port in `Dockerfile` and `/src/app.js` file
 - Build image: `docker build -f Dockerfile .. -t nodejs-sample-api:v0.1` (This will create "nodejs-sample-api:v0.1" image)
 - Run container: `docker run --name api-demo -p 5678:5678 -d nodejs-sample-api:v0.1` (This will create "api-demo" container in detached mode with port 5678 pointing to internal 5678 in container)
