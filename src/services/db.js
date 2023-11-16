@@ -11,7 +11,7 @@ var methods = {
 
     get: async function (id) {
 
-        return await db.getData("B1212");
+        return await db.getData(`/${id}`);
 
         sms.smsId = id;
         sms.from = "From";
