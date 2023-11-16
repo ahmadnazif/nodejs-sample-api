@@ -18,7 +18,7 @@ This is a simple API server that build using NodeJS and Express. This app is con
   - In `app.js` Set your preferred port. The default here is `5678`
   - Run: `node app.js`
 
-## Running & build using Docker
+## Build & running using Docker
 - Clone this repo
 - Expose the same port in `/src/Dockerfile` and `/src/app.js` file
 - Build image: `docker build -f Dockerfile .. -t nodejs-sample-api:v0.1` (This will create "nodejs-sample-api:v0.1" image)
