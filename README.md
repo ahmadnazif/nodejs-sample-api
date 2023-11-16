@@ -10,14 +10,21 @@ This is a simple API server that build using NodeJS and Express. This app is con
 ## Data storage
 - This app use a very simple document base storage called `node-json-db`. Data is persisted there. You may change the document by navigating to `/src/servies/db.js` and change the filename in `Config`.
 
-## Running sample
+## Running sample using VS Code
 - Clone this repo
 - Make sure your machine has Node.js installed
 - Restore all dependency
 - Navigate to `src` folder
   - In `app.js` Set your preferred port. The default here is `5678`
   - Run: `node app.js`
- 
+
+## Running & build using Docker
+- Expose the same port in `Dockerfile` and `/src/app.js` file
+- Build image: `docker build -f Dockerfile .. -t nodejs-sample-api:v0.1` (This will create "nodejs-sample-api:v0.1" image)
+- Run container: `docker run --name api-demo -p 5678:5678 -d nodejs-sample-api:v0.1` (This will create "api-demo" container in detached mode with port 5678 pointing to internal 5678 in container)
+
+*You can use Docker Desktop to visualize the container creation process*
+
 ## Endpoints:
 ### `/` (HTTP GET)
 - Just a landing page
