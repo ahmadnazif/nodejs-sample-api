@@ -24,17 +24,19 @@ app.get("/sms/get", async (req, res) => {
     res.send(sms);
 });
 
-app.get("/sms/list-all", (req, res) => {
-    res.send("list-all");
+app.get("/sms/list-all", async (req, res) => {
+
+    let smses = await db.listAll();
+    res.send(smses);
 });
 
 app.post("/sms/add", async (req, res) => {
 
-    let id = req.body.id;
+    //let id = req.body.id;
     let from = req.body.from;
     let to = req.body.to;
     let text = req.body.text;
-    let resp = await db.add(id, from, to, text);
+    let resp = await db.add(from, to, text);
     res.send(resp);
 });
 

@@ -1,5 +1,6 @@
 //import { JsonDB, Config } from "node-json-db";
 const { JsonDB, Config } = require('node-json-db');
+ const uuid = require('uuid');
 const response = require('../models/response');
 const sms = require('../models/sms');
 const smsbase = require('../models/smsbase');
@@ -18,23 +19,32 @@ var methods = {
         }
     },
 
-    add: async function (id, from, to, text) {
+    listAll: async function(){
+
+        try {
+            return await db.getData(`/`);
+        } catch (error) {
+            return [];
+        }
+    },
+
+    add: async function (from, to, text) {
 
         try {
             
             let now = new Date();
 
-            sms.id = id;
+            sms.smsId = uuid.v4();
             sms.from = from;
             sms.to = to;
             sms.text = text;
             sms.createdTimeUtc = now.toISOString();
             var data = JSON.stringify(sms);
 
-            await db.push(`/${id}`, data)
+            await db.push(`/${sms.smsId}`, data)
 
             response.isSuccess = true;
-            response.message = `SMS ${id} added`;
+            response.message = `SMS '${sms.smsId}' added`;
             return response;
 
         } catch (error) {
