@@ -1,10 +1,3 @@
 {
-    "X1": "{\"from\":\"TestFrom\",\"to\":\"TestTo\",\"text\":\"TestText\",\"createdTime\":\"2023-11-16T04:13:31.206Z\",\"id\":\"X1\"}",
-    "X2": "{\"from\":\"TestFrom\",\"to\":\"TestTo\",\"text\":\"TestText\",\"id\":\"X2\"}",
-    "X3": "{\"smsId\":\"X3\",\"from\":\"TestFrom\",\"to\":\"TestTo\",\"text\":\"TestText\",\"createdTimeUtc\":\"2023-11-16T04:50:51.062Z\"}",
-    "X4": "{\"from\":\"TestFrom\",\"to\":\"TestTo\",\"text\":\"TestText\",\"createdTime\":\"2023-11-16T04:13:00.497Z\",\"id\":\"X4\"}",
-    "f45e8c8c-8e03-4070-a911-4ccf2f3cc301": "{\"smsId\":\"f45e8c8c-8e03-4070-a911-4ccf2f3cc301\",\"from\":\"TestFrom\",\"to\":\"TestTo\",\"text\":\"TestText\",\"createdTimeUtc\":\"2023-11-16T04:29:18.843Z\"}",
-    "ec2a8635-c496-4455-9f74-ba53bef69d47": "{\"smsId\":\"ec2a8635-c496-4455-9f74-ba53bef69d47\",\"from\":\"TestFrom\",\"to\":\"TestTo\",\"text\":\"TestText\",\"createdTimeUtc\":\"2023-11-16T04:29:22.720Z\"}",
-    "2a22d83f-17a0-449f-bbcc-55803a93b5c8": "{\"smsId\":\"2a22d83f-17a0-449f-bbcc-55803a93b5c8\",\"from\":\"TestFrom\",\"to\":\"TestTo\",\"text\":\"TestText\",\"createdTimeUtc\":\"2023-11-16T04:29:23.466Z\"}",
-    "9047a3a8-3cec-449c-afa0-6ccaec4014de": "{\"smsId\":\"9047a3a8-3cec-449c-afa0-6ccaec4014de\",\"from\":\"TestFrom\",\"to\":\"TestTo\",\"text\":\"TestText\",\"createdTimeUtc\":\"2023-11-16T04:29:24.340Z\"}"
+    "09d99864-3d0c-4b6f-b0fa-7e232b703c55": "{\"smsId\":\"09d99864-3d0c-4b6f-b0fa-7e232b703c55\",\"from\":\"TestFrom\",\"to\":\"TestTo\",\"text\":\"TestText\",\"createdTimeUtc\":\"2023-11-16T05:01:47.209Z\"}"
 }
