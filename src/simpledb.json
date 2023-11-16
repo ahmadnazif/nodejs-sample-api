@@ -1,4 +1,8 @@
 {
     "B1212": "B1212, TestFrom, TestTo, TestText",
-    "C1212": "C1212, TestFrom, TestTo, TestText"
+    "C1212": "C1212, TestFrom, TestTo, TestText",
+    "X1": "{\"from\":\"TestFrom\",\"to\":\"TestTo\",\"text\":\"TestText\",\"createdTime\":\"2023-11-16T04:13:31.206Z\",\"id\":\"X1\"}",
+    "X2": "{\"from\":\"TestFrom\",\"to\":\"TestTo\",\"text\":\"TestText\",\"id\":\"X2\"}",
+    "X3": "{\"from\":\"TestFrom\",\"to\":\"TestTo\",\"text\":\"TestText\",\"createdTime\":\"function now() { [native code] }\",\"id\":\"X3\"}",
+    "X4": "{\"from\":\"TestFrom\",\"to\":\"TestTo\",\"text\":\"TestText\",\"createdTime\":\"2023-11-16T04:13:00.497Z\",\"id\":\"X4\"}"
 }

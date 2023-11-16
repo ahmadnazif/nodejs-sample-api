@@ -11,29 +11,27 @@ var methods = {
 
     get: async function (id) {
 
-        return await db.getData(`/${id}`);
-
-        sms.smsId = id;
-        sms.from = "From";
-        sms.to = "To";
-        sms.text = "Hello";
-        sms.createdTime = Date.now;
-        return sms;
-
+        try {
+            return await db.getData(`/${id}`);
+        } catch (error) {
+            return null;
+        }
     },
 
     add: async function (id, from, to, text) {
 
         try {
-            /*
-            smsbase.id = id;
-            smsbase.from = from;
-            smsbase.to = to;
-            smsbase.text = text;
-            await db.push(id, from);
-            */
+            
+            let now = new Date();
 
-            await db.push(`/${id}`, `${id}, ${from}, ${to}, ${text}`);
+            sms.id = id;
+            sms.from = from;
+            sms.to = to;
+            sms.text = text;
+            sms.createdTimeUtc = now.toISOString();
+            var data = JSON.stringify(sms);
+
+            await db.push(`/${id}`, data)
 
             response.isSuccess = true;
             response.message = `SMS ${id} added`;
