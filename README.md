@@ -7,6 +7,9 @@ This is a simple API server that build using NodeJS and Express. This app is con
 - uuid
 - node-js-db
 
+## Data storage
+- This app use a very simple document base storage called `node-js-db`. Data is persisted there. You may change the document by navigating to `/src/servies/db.js` and change the filename in `Config`.
+
 ## Running sample
 - Clone this repo
 - Make sure your machine has Node.js installed
@@ -16,21 +19,21 @@ This is a simple API server that build using NodeJS and Express. This app is con
   - Run: `node app.js`
  
 ## Endpoints:
-- `/`: home
-  - Just a landing page 
-- `/sms/get` (HTTP GET)
-  - Get one sms
-  - Query string: `id`
-  - Example: `BASE-URL/sms/get?id=ABC123`
-- `/sms/list-all` (HTTP GET)
-  - List all sms
-  - No query string
-  - Example: `BASE-URL/sms/list-all`  
-- `/sms/add` (HTTP POST)
-  - Add one sms
-  - Require JSON body to add the data. The `smsId` for this SMS is automatically generated
-  - Example: `BASE-URL/sms/add`
-    - JSON BODY:
+### `/` (HTTP GET)
+- Just a landing page
+### `/sms/get` (HTTP GET)
+- Get one sms
+- Query string: `id`
+- Example: `BASE-URL/sms/get?id=ABC123`
+### `/sms/list-all` (HTTP GET)
+- List all sms
+- No query string
+- Example: `BASE-URL/sms/list-all`  
+### `/sms/add` (HTTP POST)
+ - Add one sms
+ - Require JSON body to add the data. The `smsId` for this SMS is automatically generated
+ - Example: `BASE-URL/sms/add`
+ - JSON BODY:
 ```json
 {
 	"from": "TestFrom",
@@ -38,11 +41,11 @@ This is a simple API server that build using NodeJS and Express. This app is con
 	"text": "TestText"
 }
 ```
-- `/sms/edit` (HTTP PUT)
-  - Edit one sms
-  - Require JSON body to edit the data. The `smsId` must be supplied
-  - Example: `BASE-URL/sms/edit`
-    - JSON BODY:
+### `/sms/edit` (HTTP PUT)
+- Edit one sms
+- Require JSON body to edit the data. The `smsId` must be supplied
+- Example: `BASE-URL/sms/edit`
+- JSON BODY:
 ```json
 {
 	"smsId": "ABC123",
@@ -51,3 +54,7 @@ This is a simple API server that build using NodeJS and Express. This app is con
 	"text": "TestText"
 }
 ```
+### `/sms/delete` (HTTP DELETE)
+- Delete one sms
+- Query string: `id`
+- Example: `BASE-URL/sms/delete?id=ABC123`
