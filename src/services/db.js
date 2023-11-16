@@ -1,9 +1,7 @@
-//import { JsonDB, Config } from "node-json-db";
 const { JsonDB, Config } = require('node-json-db');
 const response = require('../models/response');
 const sms = require('../models/sms');
 const smsbase = require('../models/smsbase');
-
 
 var db = new JsonDB(new Config("simpledb", true, true, '/'));
 
@@ -70,9 +68,7 @@ var methods = {
             }
             else {
                 return this.add(id, from, to, text);
-            }
-
-           
+            }           
 
         } catch (error) {
 
