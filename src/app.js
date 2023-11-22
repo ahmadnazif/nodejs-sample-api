@@ -1,5 +1,6 @@
 const express = require('express');
 const uuid = require('uuid');
+const cors = require('cors');
 
 const response = require('./models/response');
 const db = require('./services/db');
@@ -7,6 +8,7 @@ const smsbase = require('./models/smsbase');
 const port = 5678;
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 app.listen(port, () => {
