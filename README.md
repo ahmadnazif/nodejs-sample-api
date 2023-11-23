@@ -1,6 +1,8 @@
 # nodejs-sample-api
 
-This is a simple API server that build using NodeJS and Express. The similiar API server buit using .NET can be found [here](https://github.com/ahmadnazif/aspnetcore-aot-sample-api).
+This is a simple API server that build using NodeJS and Express. I've also built the similiar API server using:
+- [.NET](https://github.com/ahmadnazif/aspnetcore-aot-sample-api)
+- [Quarkus (Java)](https://github.com/ahmadnazif/quarkus-sample-api)
 
 ## Dependency used
 - ExpressJS
